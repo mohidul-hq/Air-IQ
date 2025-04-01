@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="resorecs/Favicons/favicon.ico">
+    <link rel="icon" type="image/png" href="resorecs/Favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" href="resorecs/Favicons/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" href="resorecs/Favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="resorecs/Favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="resorecs/Favicons/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-xl shadow-lg w-96 text-center">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Select Payment Method</h2>
+        <div class="flex justify-around mb-4">
+            <div class="p-3 rounded-lg cursor-pointer transition hover:bg-blue-100" onclick="selectPayment(this)">
+                <img  src="resorecs/img/upi.png" alt="GPay" class="w-12 mx-auto mt-3">
+                <p class="text-sm mt-4 ">UPI</p>
+            </div>
+            <div class="p-3 rounded-lg cursor-not-allowed transition hover:bg-blue-100" onclick="selectPayment(this)">
+                <img src="resorecs/img/online.png" alt="Net Banking" class="w-12 mx-auto">
+                <p class="text-sm mt-2">Net Banking</p>
+            </div>
+            <div class="p-3 rounded-lg cursor-not-allowed    transition hover:bg-blue-100" onclick="selectPayment(this)">
+                <img src="resorecs/img/card.png" alt="Card" class="w-12 mx-auto">
+                <p class="text-sm mt-2">Card</p>
+            </div>
+        </div>
+
+    <form id="upi-form">
+        <h2 class="text-lg font-medium text-gray-700 mb-3">Enter Amount</h2>
+        <input type="number" placeholder="₹ 0.00" id="amount" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+        <button type="submit" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition" id="upi-form"  >Continue</button>
+
+        
+    </form>
+    <div class="m-3.5 ml-10 cursor-none " id="qrcode"></div>
+    <div id="time"> </div>
+    <a href="./resorecs/successPage.html">
+        <button id="continue-btn" class="hidden bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300 ml-30 ">
+            Done
+        </button>
+    </a>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <script src="resorecs/JS/index.js"></script>
+</body>
+</html>

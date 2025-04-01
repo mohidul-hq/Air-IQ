@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | AIRIQ </title>
+
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-[#ECECEC]">
+    <!-- navbar start here  -->
+    <nav class="bg-slate-50 flex justify-between sm:justify-around    w-full sm:h-18 h-12  flex-wrap items-center ">
+        <div class="flex items-center justify-center ">
+            <a href="#19">
+                <img class="w-full  h-auto md:w-34" src="https://airiq.in/img/logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="flex items-center mr-1 ">
+            <div class="bg-amber-300 flex h-9 rounded items-center p-3 mr-1.5 cursor-pointer">
+
+                <span><img class="h-5 mr-1" src="https://airiq.in/img/icons/Air-Passenger.png" alt="Air"></span>
+                <p class=" hidden sm:block"> Pax Calendar</p>
+            </div>
+
+            <div id="toggle-btn"
+                class="bg-slate-300 flex h-9 rounded cursor-pointer items-center p-3 mr-1 text-slate-600 ">
+                <p class="hidden md:block font-semibold"> Balance </p> <span class="text-red-500 pl-1.5 font-bold">₹
+                    0</span>
+                <p></p>
+            </div>
+
+
+
+            <!-- The sidebar Start here -->
+
+            <!-- ye navigation ka kam aata hai ( the sidebar)  -->
+            <div id="sidebar"
+                class="w-[300px] z-1 bg-gray-700 rounded-l-4xl shadow-md h-[80%] transform translate-x-full transition-transform duration-300 fixed right-0 top-0">
+                <!-- Menu Section Start Here  -->
+                <nav class="p-4">
+                    <div class="flex">
+                        <div class="flex text-slate-50 bg-gray-600 items-center justify-center p-1 rounded-2xl ml-0.5">
+                            <p class="text-xl uppercase font-semibold">Your Balance Is <span
+                                    class="text-2xl text-green-600"> ₹</span> <span
+                                    class="text-2xl text-red-500">00.0</span>
+                                </p>
+                        </div>
+                    </div>
+                    <!-- Add Balance -->
+                    <div class=" ">
+
+                        <div class="bg-gray-600 rounded-2xl mt-1    flex w-auto">
+
+                            
+                                <p class="  justify-center items-center uppercase font-bold   text-2xl  p-2 ml-1.5 text-yellow-400 ">Add Balance </p>
+                                <a href="Payment Gateway/index.html">
+                                    
+                                    <span class=""> <img class="justify-center items-center h-11 ml-2 invert-85  hover:invert-0 " src="src/wallet.png " alt=""></span>
+                                </a>
+
+
+                            
+
+                        </div>
+
+                    </div>
+                    <!-- Add more links as needed -->
+                </nav>
+                <!-- Menu Section end Here  -->
+            </div>
+
+            <!-- The sidebar end here -->
+
+
+            <div>
+
+                <span> <img id="menu" class="h-10 hover:cursor-pointer   " src="src/menu.svg" alt="Menu">
+
+                </span>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends here  -->
+    <!-- main body start here  -->
+    <!-- route buttion st here  -->
+    <div class=" ml-53 mt-5">
+        <button class="flex">
+            <div
+                class="uppercase  bg-blue-500 m-1.5 rounded-2xl text-slate-300 cursor-grab font-semibold p-2.5 hover:bg-blue-600 hover:text-black ">
+                oneway
+            </div>
+            <div
+                class="uppercase  bg-slate-300 m-1.5 rounded-2xl text-slate-700 cursor-pointer  font-semibold p-2.5 hover:bg-blue-600 hover:text-black">
+                round trip
+            </div>
+        </button>
+    </div>
+    <!-- route buttion end here  -->
+    <main class="flex  justify-center  mt-[-55px]">
+
+        <div class=" border-b-gray-400  border-b-1  w-[95%] sm:w-[70%] h-[75%] bg-gray-50 mt-15  rounded-t-xl flex">
+
+            <!-- Origin st here  -->
+            <div class="h-20 ml-4  w-[25%] border-r  border-gray-300">
+                <label class="font-bold  text-2xl">From</label>
+                <select class="text-xl hover:text-black font-bold text-gray-500 cursor-pointer " required>
+                    <option class="text-gray-500" value="0" disabled selected>Origin</option>
+                    <option value="CCU">CCU - Kolkata</option>
+                    <option value="DEL">DEL - Delhi</option>
+                    <option value="BOM">BOM - Mumbai</option>
+                    <option value="BLR">BLR - Bengaluru</option>
+                    <option value="MAA">MAA - Chennai</option>
+                    <option value="HYD">HYD - Hyderabad</option>
+                    <option value="AMD">AMD - Ahmedabad</option>
+                    <option value="COK">COK - Kochi</option>
+                    <option value="GOI">GOI - Goa</option>
+                    <option value="PNQ">PNQ - Pune</option>
+                    <option value="ATQ">ATQ - Amritsar</option>
+                    <option value="LKO">LKO - Lucknow</option>
+                    <option value="GAU">GAU - Guwahati</option>
+                    <option value="IXC">IXC - Chandigarh</option>
+                    <option value="JAI">JAI - Jaipur</option>
+                    <option value="IXB">IXB - Bagdogra</option>
+                    <option value="TRV">TRV - Trivandrum</option>
+                    <option value="IXM">IXM - Madurai</option>
+                    <option value="IXE">IXE - Mangalore</option>
+                    <option value="IXR">IXR - Ranchi</option>
+                    <option value="VNS">VNS - Varanasi</option>
+                    <option value="IXL">IXL - Leh</option>
+                    <option value="IXJ">IXJ - Jammu</option>
+                    <option value="IXA">IXA - Agartala</option>
+                    <option value="IXD">IXD - Prayagraj</option>
+                    <option value="IXU">IXU - Aurangabad</option>
+                    <option value="BHO">BHO - Bhopal</option>
+                    <option value="BBI">BBI - Bhubaneswar</option>
+                    <option value="CJB">CJB - Coimbatore</option>
+                    <option value="IDR">IDR - Indore</option>
+                    <option value="IMF">IMF - Imphal</option>
+                    <option value="NAG">NAG - Nagpur</option>
+                    <option value="PAT">PAT - Patna</option>
+                    <option value="RAJ">RAJ - Rajkot</option>
+                    <option value="SXR">SXR - Srinagar</option>
+                    <option value="TIR">TIR - Tirupati</option>
+                    <option value="TRZ">TRZ - Tiruchirappalli</option>
+                    <option value="VGA">VGA - Vijayawada</option>
+                    <option value="VTZ">VTZ - Visakhapatnam</option>
+                </select>
+
+
+            </div>
+            <!-- Origin end here  -->
+
+            <!-- Destination st -->
+            <div class=" border-r  border-gray-300 ">
+                <div class="h-15 ml-4  w-[25%]  ">
+                    <label class="font-bold  text-2xl">To</label>
+                    <select class="text-xl hover:text-black font-bold text-gray-500 cursor-pointer " required>
+                        <option class="text-gray-500" value="0" disabled selected>Destination</option>
+                        <option value="CCU">CCU - Kolkata</option>
+                        <option value="DEL">DEL - Delhi</option>
+                        <option value="BOM">BOM - Mumbai</option>
+                        <option value="BLR">BLR - Bengaluru</option>
+                        <option value="MAA">MAA - Chennai</option>
+                        <option value="HYD">HYD - Hyderabad</option>
+                        <option value="AMD">AMD - Ahmedabad</option>
+                        <option value="COK">COK - Kochi</option>
+                        <option value="GOI">GOI - Goa</option>
+                        <option value="PNQ">PNQ - Pune</option>
+                        <option value="ATQ">ATQ - Amritsar</option>
+                        <option value="LKO">LKO - Lucknow</option>
+                        <option value="GAU">GAU - Guwahati</option>
+                        <option value="IXC">IXC - Chandigarh</option>
+                        <option value="JAI">JAI - Jaipur</option>
+                        <option value="IXB">IXB - Bagdogra</option>
+                        <option value="TRV">TRV - Trivandrum</option>
+                        <option value="IXM">IXM - Madurai</option>
+                        <option value="IXE">IXE - Mangalore</option>
+                        <option value="IXR">IXR - Ranchi</option>
+                        <option value="VNS">VNS - Varanasi</option>
+                        <option value="IXL">IXL - Leh</option>
+                        <option value="IXJ">IXJ - Jammu</option>
+                        <option value="IXA">IXA - Agartala</option>
+                        <option value="IXD">IXD - Prayagraj</option>
+                        <option value="IXU">IXU - Aurangabad</option>
+                        <option value="BHO">BHO - Bhopal</option>
+                        <option value="BBI">BBI - Bhubaneswar</option>
+                        <option value="CJB">CJB - Coimbatore</option>
+                        <option value="IDR">IDR - Indore</option>
+                        <option value="IMF">IMF - Imphal</option>
+                        <option value="NAG">NAG - Nagpur</option>
+                        <option value="PAT">PAT - Patna</option>
+                        <option value="RAJ">RAJ - Rajkot</option>
+                        <option value="SXR">SXR - Srinagar</option>
+                        <option value="TIR">TIR - Tirupati</option>
+                        <option value="TRZ">TRZ - Tiruchirappalli</option>
+                        <option value="VGA">VGA - Vijayawada</option>
+                        <option value="VTZ">VTZ - Visakhapatnam</option>
+                    </select>
+
+                </div>
+            </div>
+            <!-- Destination end  -->
+            <!-- Travel DAte state here -->
+            <div class=" border-r  border-gray-300 ml-3">
+                <label class="text-2xl text-black font-semibold ">Travel Date </label>
+
+                <input type="date" class="text  ml-[-12px] flex uppercase font-bold border-none px-4 py-2 rounded">
+
+            </div>
+            <!-- Travel DAte end here  -->
+            <!-- Number of Air-Passenger Start Here  -->
+            <div class="flex   ">
+                <p class="text-xl font-bold mt-1 ml-3">Pax Size </p>
+                <select class="text-xl font-semibold rounded h-7 mt-7.5 ml-[-75px]">
+                    <option class="text-xl text-black ">1‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                    <option class="text-xl text-black ">2‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                    <option class="text-xl text-black ">3‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                    <option class="text-xl text-black ">4‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                    <option class="text-xl text-black ">5‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+
+                    <option class="text-xl text-black ">6‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                    <option class="text-xl text-black ">7‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                    <option class="text-xl text-black ">8‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                    <option class="text-xl text-black ">9‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+                </select>
+                <!-- search buttion  -->
+                <div class="flex items-center justify-center ml-5.5 p-5 ">
+                    <a href="https://www.skyscanner.co.in/" target="_blank">
+                        <button
+                            class="bg-red-400 text-white flex h-9 rounded-xl items-center p-5 cursor-pointer hover:text-black hover:font-bold ">Search
+                            ‎
+
+                            <a href="src/Genius.gif">
+
+                                <span>
+                                    <img class="invert h-4 w-auto hover:h-4.5 hover:w-auto hover:cursor-wait "
+                                        src="src/search.png" alt="">
+                                </span>
+                            </a>
+                        </button>
+                    </a>
+                </div>
+                <!-- Search Buttion end here  -->
+
+            </div>
+            <!-- Number of Air-Passenger Buttion end Here  -->
+        </div>
+    </main>
+    <div class="flex justify-center mt-[1px] h-12  ">
+
+        <div class="w-[70%] bg-gray-100 rounded-b-xl border-t-0 flex justify-between bg-gray-00 overflow-hidden">
+            <div class="flex p-5.5 cursor-grab  ">
+                <p class="flex justify-center items-center uppercase text-[#fd7216] font-bold">
+                    <span>
+                        <img class="h-3 w-auto mr-1" src="src/back.svg" alt="Prev Day">
+                    </span>Prev Day
+                </p>
+
+            </div>
+            <div class="flex p-5.5 cursor-grab  ">
+                <p class="flex justify-center items-center uppercase text-[#fd7216] font-bold">
+                    Next Day
+                    <span>
+                        <img class="h-3 w-auto ml-1" src="src/Forward.svg" alt="Next Day">
+                    </span>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<!-- script of the page  -->
+<script src="src/js/script.js"></script>
+
+</html>
